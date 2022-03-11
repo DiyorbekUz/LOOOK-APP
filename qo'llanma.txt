@@ -1,0 +1,56 @@
+GET
+
+/api/user ----> hamma userlar haqida ma'lumot
+/api/foods -----> hamma food larni id raqami va nomini chiqarish
+/api/orders ----> hamma userlarni zakazlari haqida to'liq ma'lumot olish!
+
+
+POST
+
+/api/users  ----->  user qo'shish foydalanuvchi client tomondan faqat username va telefon raqam keladi va uni validatsiya qilib bazaga joylanadi
+/api/orders ----->  Bu esa food qo'shish shunchaki foydalanuvchidan client tomondan faqar maxsulot nomi va soni keladi!
+
+
+
+PUT 
+
+/put/users  ---->  Bu yerdan faqat username va contact ozgartirish mumkin halos! 
+
+example:
+
+{
+    client_id: 3268,
+    username: "Valijonbek"
+}
+
+/put/orders  -----> bu yerdan maxsulotlarnigina ozgartirish mumkin halos
+
+example:
+
+
+{
+    "client_id": 3268,
+    "cola": 0
+}
+
+DELETE
+
+/delete/users ---> bu yerda faqat client_id sini berib yuborish mumkin halos!
+
+example:
+
+{
+    "client_id": 3268
+}
+
+
+/delete/orders  ---->  Bu yerdan zakaz qilingan maxsulotlarni o'chirib tashlash mumkin 
+
+
+example:
+
+
+{
+    "client_id": 3268,
+    "cola": 0
+}
